@@ -1,0 +1,5 @@
+# Ignore local secrets
+backend/.env
+
+# Ignore installed packages
+backend/node_modules

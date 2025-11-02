@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff0f5; /* Lavender Blush */
+}
+/* Custom scrollbar for better aesthetics */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #e91e63; /* Deep Pink */
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #fce4ec; /* Pink 50 */
+}
+
+/* --- NEW COLOR PALETTE --- */
+.text-deep-pink { color: #e91e63; }
+.bg-deep-pink { background-color: #e91e63; }
+.hover\:bg-dark-pink:hover { background-color: #c2185b; }
+/* Bolder, richer dark color for navigation/accents */
+.bg-rosewood { background-color: #7a0a38; } /* Darker, Warmer Pink/Rosewood */
+.text-rose-gold { color: #f5d0c7; } /* Light accent color for dark background */
+
+/* Keyframe for a subtle pulse animation */
+@keyframes pulse-once {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 8px rgba(233, 30, 99, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(233, 30, 99, 0); }
+}
+.animate-pulse-once {
+    animation: pulse-once 1s ease-out;
+}
+
+/* Gradient and Hover for Feature Cards */
+.feature-card {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #ffebee 100%);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Springy transition */
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Stronger shadow */
+    border-radius: 1rem;
+}
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.03); /* More pronounced lift */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(233, 30, 99, 0.08); /* Deep Pink overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Moving Banner Animation */
+@keyframes scroll-text {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.scrolling-banner {
+    white-space: nowrap;
+    overflow: hidden;
+    background: linear-gradient(90deg, #fde2e8 0%, #fff 50%, #fde2e8 100%);
+    border-radius: 9999px; /* Fully rounded pill shape */
+}
+.scrolling-text {
+    display: inline-block;
+    animation: scroll-text 35s linear infinite; /* Slower, smoother scroll */
+    padding-left: 100%; 
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); /* Subtle text shadow */
+}
+
+/* Helper to hide logout button */
+.logout-btn {
+    display: none; /* Hidden by default, shown via JS */
+}
