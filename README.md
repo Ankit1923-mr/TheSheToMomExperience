@@ -88,8 +88,9 @@ To run this project on your local machine, follow these steps.
 ### **1. Clone the Repository**
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-cd YOUR_REPO_NAME
+git clone https://github.com/Ankit1923-mr/TheSheToMomExperience.git
+cd TheSheToMomExperience
+
 ```
 
 ### **2. Set Up the Backend**
